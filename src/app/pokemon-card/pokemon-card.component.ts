@@ -9,5 +9,12 @@ export class PokemonCardComponent {
   @Input() 
   pokemon!: string;
 
-  teste: string = 'Informação qualquer';
+  @Input() 
+  numero!: number;
+
+  pegarImagemPokemon(){
+    const numeroFormatado = this.numero;
+
+    return `https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/${numeroFormatado}.png`
+  }
 }
