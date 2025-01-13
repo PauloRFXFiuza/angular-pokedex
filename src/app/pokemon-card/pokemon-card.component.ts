@@ -13,8 +13,17 @@ export class PokemonCardComponent {
   numero!: number;
 
   pegarImagemPokemon(){
-    const numeroFormatado = this.numero;
+    const numeroFormatado = this.leadingZero(this.numero);
 
     return `https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/${numeroFormatado}.png`
+  }
+
+  leadingZero(str: string | number, size=3) {
+    let s = String(str);
+    while (s.length < (size || 2)) {
+      s = "0" + s;
+    }
+    return s;
+
   }
 }
