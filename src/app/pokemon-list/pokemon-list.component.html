@@ -1,10 +1,8 @@
-<div>
-    <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/001.png"
-    /><br />
-    <b>Bulbasaur</b>
+<app-pokemon-card *ngFor="let pokemon of pokemons" 
+[pokemon]="pokemon"></app-pokemon-card>
+
+<!--
+<div *ngFor="let pokemon of pokemons">
+    Pokémon:{{pokemon}}
 </div>
-<div>
-    <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/002.png"
-    /><br />
-    <b>Ivysaur</b>
-</div>
+-->
